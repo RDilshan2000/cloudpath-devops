@@ -51,7 +51,7 @@ Implementation Roadmap
 
 [x] Container Engineering: Multi-layer Alpine containerization, non-root user execution, and Trivy security scanning.
 
-[ ] CI Pipeline: Automated linting, test suite execution, Docker builds, and security scans via GitHub Actions.
+[x] CI Pipeline: Automated linting, test suite execution, Docker builds, and security scans via GitHub Actions.
 
 [ ] Kubernetes Orchestration: Cluster manifests setup, liveness/readiness probes, and ingress routing.
 
