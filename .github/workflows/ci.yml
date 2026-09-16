@@ -1,17 +1,19 @@
-name: Build & Security Check
+name: CI Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -26,7 +28,7 @@ jobs:
           cd app
           npm ci
 
-      - name: Run app tests
+      - name: Run unit and health tests
         run: |
           cd app
           npm test
