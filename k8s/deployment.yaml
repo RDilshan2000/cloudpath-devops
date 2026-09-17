@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudpath-deployment
+  namespace: cloudpath
+  labels:
+    app: cloudpath-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cloudpath-app
+  template:
+    metadata:
+      labels:
+        app: cloudpath-app
+    spec:
+      containers:
+        - name: cloudpath-container
+          image: cloudpath-app:v1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          envFrom:
+            - configMapRef:
+                name: app-config
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "50m"
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 5
