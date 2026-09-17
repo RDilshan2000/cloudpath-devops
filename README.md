@@ -57,6 +57,6 @@ Implementation Roadmap
 
 [x] Infrastructure Provisioning: Modular Terraform templates for reproducible infrastructure.
 
-[ ] Release Management: Rolling deployments, automated zero-downtime rollouts, and instant rollbacks.
+[x] Release Management: Rolling deployments, automated zero-downtime rollouts, and instant rollbacks.
 
 [ ] Observability Stack: Centralized metric collection and visualization dashboards.
