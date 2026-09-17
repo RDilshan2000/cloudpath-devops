@@ -53,9 +53,9 @@ Implementation Roadmap
 
 [x] CI Pipeline: Automated linting, test suite execution, Docker builds, and security scans via GitHub Actions.
 
-[ ] Kubernetes Orchestration: Cluster manifests setup, liveness/readiness probes, and ingress routing.
+[x] Kubernetes Orchestration: Cluster manifests setup, liveness/readiness probes, and ingress routing.
 
-[ ] Infrastructure Provisioning: Modular Terraform templates for reproducible infrastructure.
+[x] Infrastructure Provisioning: Modular Terraform templates for reproducible infrastructure.
 
 [ ] Release Management: Rolling deployments, automated zero-downtime rollouts, and instant rollbacks.
 
